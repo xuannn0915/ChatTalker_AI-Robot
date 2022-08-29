@@ -1,0 +1,271 @@
+@import "bootstrap/bootstrap-reboot";
+@import "bootstrap/bootstrap";
+
+body {
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+// 第一屏
+.wrap {
+    height: 100vh;
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg), url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball01.svg);
+    background-repeat: no-repeat;
+    background-position: top right, bottom -180px left -222px;
+
+    //navbar
+    header {
+
+        img {
+            width: 218.06px;
+        }
+
+        @media (max-width:768px) {
+            border-bottom: 2px solid $warning;
+            background-color: #fff;
+        }
+
+        @media (max-width:375px) {
+            img {
+                width: 130px;
+                object-fit: contain;
+            }
+
+        }
+    }
+
+    // banner
+    .banner {
+
+        .slogan {
+            font-size: 18px;
+        }
+
+        .detailed {
+            font-size: 20px;
+        }
+
+
+
+        @media (max-width:375px) {
+            .banner-title {
+                .slogan {
+                    font-size: 16px;
+                }
+
+                h1 {
+                    font-size: 32px;
+                }
+
+                .detailed {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    @media (max-width:1200px) {
+        height: auto;
+        background-image: none;
+
+        .banner-pic {
+            background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home_sm.svg);
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            background-size: contain;
+        }
+
+
+    }
+}
+
+
+// 三大平台
+.platform {
+    padding: 100px 0;
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball01.svg);
+    background-repeat: no-repeat;
+    background-position: top -180px left -222px;
+
+    li {
+        list-style: none;
+        max-width: 250px;
+    }
+
+    img {
+        width: 90px;
+    }
+
+    // ball01-mobile
+    @media (max-width:1200px) {
+        padding: 60px 0;
+        background-position: top 16px left -77px;
+        background-size: 126px 126px;
+    }
+
+    @media (max-width:768px) {
+        img {
+            width: 60px;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+
+    }
+}
+
+// 使用者角色
+.persona {
+    margin-bottom: 100px;
+
+    &-title {
+        p {
+            font-size: 20px;
+        }
+    }
+
+    .card {
+        height: 100%;
+    }
+
+    @media (max-width:768px) {
+        margin-bottom: 60px;
+
+    }
+}
+
+// 四大特色了解品牌
+.special {
+    margin-bottom: 100px;
+
+    .card {
+        height: 100%;
+
+        .icon-bg {
+            width: 86px;
+
+            img {
+                width: 52px;
+            }
+        }
+    }
+
+    .special-right {
+        p {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width:768px) {
+        margin-bottom: 60px;
+
+        .special-right {
+            h3 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+// 好評如潮
+.comment {
+    margin-bottom: 134px;
+
+    .carousel-indicators {
+        bottom: -48px;
+    }
+
+    .row {
+        padding-top: 56px;
+
+        .item {
+            position: relative;
+
+            .card {
+                height: 100%;
+
+                .saying {
+                    height: 96px;
+                }
+            }
+
+            img {
+                position: absolute;
+                width: 80px;
+                z-index: 1;
+                top: -56px;
+                left: 32px;
+            }
+
+            .stars {
+                .material-icons {
+                    color: #F5CA52;
+                }
+            }
+
+            .text-hidden {
+                height: 72px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    @media (max-width:768px) {
+        margin-bottom: 94px;
+
+    }
+}
+
+// footer
+.footer {
+    .footer-cta {
+        padding-bottom: 125px;
+
+        .content {
+            bottom: 0px;
+        }
+    }
+
+    .footer-copyright {
+        background: #F5F5F5;
+    }
+
+    @media (max-width:768px) {
+        .footer-cta {
+            padding-bottom: 200px;
+            .content {
+                h3 {
+                    font-size: 24px;
+                }
+            }
+        }
+
+    }
+}
+
+// scroll top
+.scroll-btn{
+    position: fixed;
+    bottom: 32px;
+    right: 64px;
+
+    @media (max-width:768px) {
+        bottom: 24px;
+        right: 24px;
+    }
+}
